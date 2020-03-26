@@ -13,7 +13,7 @@ module Chinese
     def self.is_holiday?(date)
       event = self.event(date)
 
-      return self.weekend?(self.to_date(date)) if event.nil?
+      return false if event.nil?
 
       event.holiday?
     end
